@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+   <title>音読修行</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+    <style> 
+         #text {width: 100%; height: 300px; font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 22px;}
+         #accent {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 24px;}
+         #en-US {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 24px;}
+         #en-GB {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 24px;}
+         #en-AU {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 24px;}
+         #en-IN {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 24px;}
+         #download {font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 28px;}
+
+    </style>
+    <script src="/static/app.js"></script>
+</head>
+
+<body>
+    
+    <form action="/" method="POST">
+
+      <div class="pulldownset">
+<br>
+         <!-- ========================================== -->
+         <select id="accent" class="mainselect form-control" name="accent">
+            <option value="">アクセントを選んでください。</option>
+            <option value="en-US">アメリカ</option>
+            <option value="en-GB">イギリス</option>
+            <option value="en-AU">オーストラリア</option>
+            <option value="en-IN">インド</option>
+         </select>
+<br>   
+         <!-- ================================================================ -->
+         <select id="en-US" class="subbox form-control" name="voiceId[]">
+            <option value="">音声を選んでください。</option>
+            <option value="en-US-Wavenet-A">ジェームス</option>
+            <option value="en-US-Wavenet-B">ベンジャミン</option>
+            <option value="en-US-Wavenet-C">エマ</option>
+            <option value="en-US-Wavenet-D">ダニエル</option>
+            <option value="en-US-Wavenet-E">ソフィア</option>
+            <option value="en-US-Wavenet-F">スカーレット</option>
+         </select>
+   
+         <!-- ================================================================ -->
+         <select id="en-GB" class="subbox form-control" name="voiceId[]">
+            <option value="">音声を選んでください。</option>
+            <option value="en-GB-Wavenet-A">アメリア</option>
+            <option value="en-GB-Wavenet-B">ハリー</option>
+            <option value="en-GB-Wavenet-C">エミリー</option>
+            <option value="en-GB-Wavenet-D">ジョージ</option>
+         </select>
+   
+         <!-- ================================================================ -->
+         <select id="en-AU" class="subbox form-control" name="voiceId[]">
+            <option value="">音声を選んでください。</option>
+            <option value="en-AU-Wavenet-A">シャーロット</option>
+            <option value="en-AU-Wavenet-B">ウィリアム</option>
+            <option value="en-AU-Wavenet-C">オリビア</option>
+            <option value="en-AU-Wavenet-D">ノア</option>
+         </select>
+   
+         <!-- ================================================================ -->
+         <select id="en-IN" class="subbox form-control" name="voiceId[]">
+            <option value="">音声を選んでください。</option>
+            <option value="en-IN-Wavenet-A">ダーシャ</option>
+            <option value="en-IN-Wavenet-B">ハリッシュ</option>
+            <option value="en-IN-Wavenet-C">サイ</option>
+         </select>
+<br>
+<br>   
+      </div>
+      <textarea id="text" class="form-control" name="text" placeholder="ここに英文を入力してください。" maxlength="3000" minlength="1"></textarea>
+<br>
+<div style="text-align:center">
+<div class="custom-control custom-radio custom-control-inline" style="font-family:'M PLUS Rounded 1c', sans-serif; font-size:24px">
+   <input type="radio" id="customRadioInline1" name="Radio" class="custom-control-input" value="normal" checked>
+   <label class="custom-control-label" for="customRadioInline1">普通</label>
+ </div>
+ <div class="custom-control custom-radio custom-control-inline" style="font-family:'M PLUS Rounded 1c', sans-serif; font-size:24px">
+   <input type="radio" id="customRadioInline2" name="Radio" class="custom-control-input" value="fast">
+   <label class="custom-control-label" for="customRadioInline2">速い</label>
+ </div>
+</div>
+ <br>
+      <div style="text-align:center">
+         <input id="download" class="btn btn-primary" type="submit" value="音声をダウンロード">
+      </div>
+   
+   </form>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
