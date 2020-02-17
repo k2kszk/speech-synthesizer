@@ -1,0 +1,7 @@
+.venv/
+.vscode/
+.git/
+credentials.json
+Pipfile
+Pipfile.lock
+__pycache__
